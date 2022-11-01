@@ -1,0 +1,18 @@
+# CRIA O PROJETO:
+> scrapy startproject jogodetabuleiro
+
+> scrapy genspider nome site
+
+# AMBIENTE DE SIMULAÇÃO
+> scrapy shell
+
+# TESTAR A CONEXÃO
+> fetch('https://boardgamegeek.com/browse/boardgame/page/1') 
+
+>>> response.css('#row_').getall()
+>>> response.css('.collection_rank a::attr(name)').get() 
+
+# EXECUTA O CÓDIGO
+scrapy.exe crawl jogos -O jogos.csv
+
+site: https://boardgamegeek.com/browse/boardgame/page/1'
